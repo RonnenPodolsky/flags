@@ -1,8 +1,8 @@
 import './Filter.css';
 
-const Filter = ({ region, changeRegion, filterCountries }) => {
+const Filter = ({ region, setRegion }) => {
     return (
-        <select onChange={(e) => changeRegion(e)} className="filter_search" placeholder='Filter by region' >
+        <select vale={region} onChange={(e) => setRegion(e.target.value.toLowerCase())} className="filter_search" placeholder='Filter by region' >
             <option value="all">Filter by region</option>
             <option value="Europe">Europe</option>
             <option value="Africa">Africa</option>

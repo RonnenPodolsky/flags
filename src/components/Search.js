@@ -2,12 +2,12 @@ import Filter from './Filter';
 import './Search.css';
 import TextSearch from './TextSearch';
 
-const Search = ({ filterCountries, changeRegion, setcountryToSearch, region }) => {
+const Search = ({ searchedCountry, setSearchedCountry, region, setRegion }) => {
     return (
         <>
             <nav className='search-nav'>
-                <TextSearch setcountryToSearch={setcountryToSearch} filterCountries={filterCountries}></TextSearch>
-                <Filter region={region} filterCountries={filterCountries} changeRegion={changeRegion}></Filter>
+                <TextSearch searchedCountry={searchedCountry} setSearchedCountry={setSearchedCountry}></TextSearch>
+                <Filter region={region} setRegion={setRegion}></Filter>
             </nav>
         </>
     );
